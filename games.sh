@@ -1,6 +1,6 @@
 #!/bin/sh
 
-choices="steam\nretroarch\nminecraft\n0ad"
+choices="steam\nretroarch\ndoomsday\nminecraft\n0ad"
 
 chosen=$(echo -e "$choices" | dmenu -i -p "Games")
 
@@ -12,6 +12,8 @@ elif [ "$chosen" = "minecraft" ]; then
 	minecraft-launcher
 elif [ "$chosen" = "0ad" ]; then
 	0ad
+elif [ "$chosen" = "doomsday" ]; then
+	doomsday
 else
 	exit 0
 fi
