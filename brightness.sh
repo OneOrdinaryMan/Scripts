@@ -14,11 +14,9 @@ elif [ $1 = "-" ] && [ $b_lvl -lt 20 ]; then
 	n_b_lvl=10
 fi
 
-b_val=$(echo "scale=2;$n_b_lvl/100" | bc)
-
 for i in $monitor
 do
-	xrandr --output "$i" --brightness "$b_val"
+	brightnessctl set $n_b_lvl%
 done
 
 echo "$n_b_lvl" > /var/custom/brightness
