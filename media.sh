@@ -2,7 +2,7 @@
 
 choices="kodi\nmusic\ncalibre"
 
-chosen=$(echo -e "$choices" | dmenu -i -p "Media")
+chosen=$(echo -e "$choices" | rofi -dmenu -i -p "Media")
 
 if [ $chosen = "kodi" ]; then
 	kodi

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 choices="poweroff\nreboot\nlog_out\nsuspend\nsleep"
-chosen=$(echo -e "$choices" | dmenu -i -p "Execute:")
+chosen=$(echo -e "$choices" | rofi -dmenu -i -p "Execute:")
 
 if [ $chosen = "poweroff" ]; then
 	poweroff

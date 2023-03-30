@@ -2,7 +2,7 @@
 
 choices="steam\nretroarch\ndoomsday\nminecraft\n0ad"
 
-chosen=$(echo -e "$choices" | dmenu -i -p "Games")
+chosen=$(echo -e "$choices" | rofi -dmenu -i -p "Games")
 
 if [ "$chosen" = "steam" ]; then
 	steam
