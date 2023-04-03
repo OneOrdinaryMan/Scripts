@@ -4,6 +4,11 @@ read -p "Do you want to update the system? (y/N)" start_script
 
 if [[ $start_script == "y" ]] || [[ $start_script == "Y" ]]; then
 
+  read -p "Do you want to upgrade the mirrors? (y/N)" mirror
+
+  if [[ $mirror == "y" ]] || [[ $mirror == "Y" ]]; then
+    pacman-mirrors -f 5
+  fi
   echo "Updating the MAIN & AUR packages:"
   paru -Syu --devel --noconfirm
   echo "Updating with RUSTUP"
