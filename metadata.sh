@@ -10,7 +10,7 @@ do
 	trk_name=${trk_name/%\.flac}
 	echo $trk_name
 
-	if [ $trk_no -le "6" ]; then
+	if [ $trk_no -le "15" ]; then
 		dsc_no='1'
 	#elif [ $trk_no -lt "18" ]; then
 	#	dsc_no='2'
